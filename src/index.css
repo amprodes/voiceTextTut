@@ -11,21 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.vivi_text {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
 .container {
   margin: 20px;
-  display: grid;
+  /*display: grid;*/
   grid-template-columns: 1fr 1fr;
+  position: absolute;
+  bottom: 0;
 }
-
+ 
+.box {
+  box-shadow: 0px 0px 20px -16px rgb(0 0 0 / 75%);
+  min-height: 20rem;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px 8px 0px 0px;
+  border: 1px solid #ccc;
+  background: linear-gradient(2deg, rgba(0,0,0,0.10968137254901966) 0%, rgba(0,0,0,0.0844712885154062) 35%, rgba(0,0,0,0) 100%);
+}
+/*
 .box {
   box-shadow: -4px 10px 35px -1px rgba(0, 0, 0, 0.75);
   min-height: 20rem;
   margin: 30px;
   padding: 20px;
   border-radius: 5px;
+}*/
+p.vivi_listened::first-letter {
+  text-transform:capitalize;
 }
-
 h1 {
   margin-left: 20px;
 }
@@ -36,4 +54,101 @@ button {
   padding: 10px;
   border-radius: 5px;
   background: transparent;
+}
+.options label {
+  width: 100% !important;
+  display: flex;
+}
+
+.options input[type="radio"] {
+  min-width: 20px;
+  min-height: 20px; 
+  accent-color: #b92626;
+  margin-right: 6px;
+} 
+.number {
+  float: left;
+  margin-left: 30px;
+  font-size: 12px;
+  color: #0000008c;
+}
+.options .elemento {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+table.resumen {
+  min-width: 100%;
+}
+th.destino {
+  text-align: right;
+  font-size: 12px;
+  color: #625d5d;
+  font-weight: normal;
+}
+th.origen {
+  text-align: left;
+  font-size: 12px;
+  color: #625d5d;
+  font-weight: normal;
+}
+td.accountType b, td.accountType p {
+  text-align: left !important;
+  margin: 0px;
+}
+td.receiverAccount b, td.receiverAccount p {
+  text-align: right !important;
+  margin: 0px;
+}
+table.resumen > tbody > tr:nth-child(2) > td.receiverAccount {
+  font-size: 14px;
+  font-weight: normal;
+  color: #625d5d;
+}
+table.resumen > tbody > tr:nth-child(2) > td.accountType {
+  font-size: 14px;
+  font-weight: normal;
+  color: #625d5d;
+}
+.resumenTotal {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 30px;
+  height: 120px;
+}
+.resumenTotal h2 {
+  margin-top: 0px;
+  border-bottom: 1px solid #ccc;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.resumenTotal p {
+  margin-bottom: 0px;
+}
+div.transactionCost > div:nth-child(1) {
+  text-align: left;
+  display: inline;
+  width: 40%;
+  float: left;
+  margin-left: 20px;
+  font-size:12px;
+}
+div.transactionCost > div:nth-child(2) {
+  text-align: right;
+  display: inline;
+  width: 40%;
+  float: right;
+  margin-right: 20px;
+  font-size:12px;
+}
+.close {
+  right: 20px;
+  position: absolute;
+  top: 20px;
+}
+.close a {
+  color: #000;
+  text-decoration: none;
 }
